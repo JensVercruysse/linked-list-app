@@ -1,5 +1,9 @@
 #include "bull.h"
 
+Bull::Bull(){
+    
+};
+
 Bull::Bull(int weight, int liftCapacity, std::string name)
 {
     this->weight = weight;
@@ -9,5 +13,5 @@ Bull::Bull(int weight, int liftCapacity, std::string name)
 
 std::string Bull::to_string(void)
 {
-    return "Bull details: weight: " + std::to_string(weight) + " tons. LiftCapacity: " + std::to_string(liftCapacity) + " tons. Name: " + name + ".";
+    return "Bull details:\nWeight: " + std::to_string(weight) + " tons. LiftCapacity: " + std::to_string(liftCapacity) + " tons. Name: " + name + ".";
 }

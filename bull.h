@@ -6,6 +6,7 @@ class Bull
 {
   public:
     Bull(int weight, int liftCapacity, std::string name);
+    Bull();
 
   private:
     int weight = 0;

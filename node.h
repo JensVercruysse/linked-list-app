@@ -1,17 +1,18 @@
 #pragma once
+#include "bull.h"
 
 class Node
 {
   public:
-    Node(int data);
+    Node(Bull data);
 
   public:
     void set_next(Node *node);
     Node *get_next(void);
 
-    int get_data(void);
+    Bull get_data(void);
 
   private:
-    int data;
-    Node *next;
+    Bull data;
+    Node *next = nullptr;
 };

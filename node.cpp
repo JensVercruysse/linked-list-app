@@ -1,9 +1,8 @@
 #include "node.h"
 
-Node::Node(int data)
+Node::Node(Bull data)
 {
     this->data = data;
-    this->next = nullptr;
 }
 
 void Node::set_next(Node *node)
@@ -16,7 +15,7 @@ Node *Node::get_next()
     return this->next;
 }
 
-int Node::get_data()
+Bull Node::get_data()
 {
     return this->data;
 }

@@ -1,17 +1,9 @@
 #include <iostream>
 #include "bull.h"
 #include "node.h"
+#include "linkedList.h"
 
 using namespace std;
-
-void print(Node *node)
-{
-    while (node != nullptr)
-    {
-        cout << node->get_data() << endl;
-        node = node->get_next();
-    }
-}
 
 int main()
 {
@@ -19,18 +11,16 @@ int main()
     Bull bull1(15, 15, "bulliewoelly1");
     Bull bull2(20, 20, "bulliewoelly2");
 
-    cout << bull0.to_string() << endl;
-    cout << bull1.to_string() << endl;
-    cout << bull2.to_string() << endl;
-
-    Node start(0);
-    Node second(1);
-    Node last(2);
+    Node start(bull0);
+    Node second(bull1);
+    Node last(bull2);
 
     second.set_next(&last);
     start.set_next(&second);
 
-    print(&start);
+    LinkedList list;
+
+    cout << list.to_string(&start) << endl;
 
     return 0;
 }
